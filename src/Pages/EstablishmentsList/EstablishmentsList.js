@@ -8,7 +8,8 @@ export default function EstablishmentsList() {
     const [ establishmentsInfo , setEstablishmentsInfo ] = useState([]);
 
      const handleInfoFetch = () => {
-         // Chamada da API para info dos estabelecimentos
+        // Chamada da API para coletar as informações dos estabelecimentos
+        // O resultado da chamada é guardado na variável establishmentsInfo
      }
 
 

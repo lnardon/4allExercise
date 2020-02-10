@@ -8,7 +8,7 @@ export default function EstablishmentCard({ establishmentName, establishmentProd
 
   return (
     <div className={"establishmentCardContainer"} >
-        <div className={"infoDiv"} >
+        <div className={"infoDiv"} onClick={() => {history.push("/" + establishmentName)}} >
             <h3 id="establishmentName" >
                 {establishmentName}
             </h3>
@@ -16,7 +16,7 @@ export default function EstablishmentCard({ establishmentName, establishmentProd
                 {establishmentProducts} Pratos
             </h4>
         </div>
-        <div className={"addBtnDiv"} onClick={ () => history.push("/dish") } >
+        <div className={"addBtnDiv"} onClick={ () => history.push("/" + establishmentName + "/registration") } >
             <img alt="Add Btn Icon" src={require("../../assets/images/plus.svg")}/>
         </div>
     </div>

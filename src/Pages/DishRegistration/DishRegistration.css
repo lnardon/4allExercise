@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dishRegistrationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+}
+
+.headerRegistrationDiv {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+
+}
+
+.headerRegistrationDiv h2 {
+    flex: 9;
+    text-align: center;
+    color: white;
+}
+
+#backBtn {
+    display: flex;
+    flex: 1;
+    height: 25px;
+}
+
+.establishmentNameDiv {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    width: 90vw;
+    color: rgb(243,170,0);
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.formRegistrationDiv {
+    display: flex;
+    flex-direction: column;
+    flex: 12;
+    width: 90vw;
+    color: white;
+    font-size: 17px;
+}
+
+#saveBtn {
+    background-color: rgb(255, 184, 19);
+    width: 90vw;
+    height: 40px;
+    margin-bottom: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputFieldDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.inputFieldDiv input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgb(80, 80, 80) 0px 0px 9px;
+    height: 40px;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.inputFieldDiv label {
+    font-size: 19px;
+    margin: 5px 0px;
+}
+
+#priceInputField {
+    width: 110px;
+}
+
+#descriptionInputField {
+    height: 150px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: black 0px 0px 9px;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.inputFieldDiv h6{
+    font-size: 15px;
+    font-weight: 300;
+    margin: 5px 0px;
+    color: rgba(255, 255, 255, 0.75);
+}

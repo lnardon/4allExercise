@@ -8,6 +8,7 @@
     display: flex;
     width: 90vw;
     height: 90px;
+    animation: slide-in-right 1s ease-in-out;
 }
 
 .infoDiv {
@@ -17,8 +18,8 @@
     align-items: flex-start;
     border-radius: 10px;
     padding: 15px;
-    background-color: lightgrey;
-    box-shadow: lightgrey 0px 0px 13px;
+    background-color: rgb(71,71,71);
+    box-shadow: rgba(0, 0, 0, 0.33) 0px 0px 5px;
 }
 
 .addBtnDiv {
@@ -26,6 +27,7 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .addBtnDiv img {
@@ -35,10 +37,26 @@
 
 #establishmentName {
     font-size: 23px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 #establishmentProductsQuantity {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
 }
+
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+
+    100% {
+      -webkit-transform: translateX(0);
+                transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
