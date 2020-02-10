@@ -15,7 +15,8 @@
 
 .headerRegistrationDiv {
     display: flex;
-    flex: 2;
+    height: 50px;
+    margin: 10px 0px;
 }
 
 .establishmentPageHeaderDiv {

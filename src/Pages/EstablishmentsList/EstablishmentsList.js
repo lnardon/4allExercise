@@ -19,7 +19,9 @@ export default function EstablishmentsList() {
 
   return (
     <div className={"establishmentsListContainer"} >
-        <h1> share eat </h1>
+      <div className={"headerEstablishmentListDiv"} >
+        <h2>share eat</h2>
+      </div> 
         <div className={"headerDiv"} >
             <h2>
                 Lugares
