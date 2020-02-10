@@ -20,7 +20,7 @@ export default function EstablishmentPage({}) {
             <h4> {establishmentNumberOfDishes} pratos </h4>
         </div>
         <div className={"dishesListDiv"}>
-            <DishCard />
+            <DishCard dishName={"X-Bacon"} dishPrice={"23.90"} />
         </div>
         <div id="addBtn" onClick={ () => {history.push("/" + establishmentName + "/registration")} } >
             +

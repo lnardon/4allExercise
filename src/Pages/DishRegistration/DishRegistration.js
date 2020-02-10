@@ -15,7 +15,12 @@ export default function DishRegistration() {
   const handleDishRegistration = () => {
     // FUNÇÂO RESPONSÁVEL POR MANDAR AS INFORMAÇÔES DO CADASTRO PARA O SERVIDOR
     // AQUI É REALIZADO UM POST REQUEST PARA O SERVIDOR COM AS VARIAVEIS (dishDescription, dishName e dishPrice) no corpo 
-    alert("Prato Cadastrado -> " + dishName + ", " + dishPrice + ", " + dishDescription)
+    if ( dishName === "" || dishPrice === "" || dishDescription === "" ) {
+      alert(" Campos de Cadastro Incompletos ")
+    } else {
+      alert("Prato Cadastrado -> " + dishName + ", " + dishPrice + ", " + dishDescription);
+      history.goBack();
+    }
   }
 
   return (
