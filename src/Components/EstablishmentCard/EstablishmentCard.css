@@ -8,7 +8,8 @@
     display: flex;
     width: 90vw;
     height: 90px;
-    animation: slide-in-right 1s 0.5s ease-in-out;
+    animation: slide-in-right-card 1s 0.3s ease-in-out;
+    max-width: var(--max-size);
 }
 
 .infoDiv {
@@ -46,7 +47,7 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-  @keyframes slide-in-right {
+  @keyframes slide-in-right-card {
     0% {
       -webkit-transform: translateX(1000px);
               transform: translateX(1000px);

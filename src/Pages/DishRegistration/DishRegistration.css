@@ -1,3 +1,7 @@
+:root {
+    --max-size : 500px
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,17 +26,19 @@
     align-items: center;
     justify-content: center;
     width: 90vw;
+    max-width: var(--max-size)
 }
 
 .headerRegistrationDiv h2 {
-    flex: 9;
+    flex: 10;
     text-align: center;
     color: white;
 }
 
 #backBtn {
     display: flex;
-    flex: 1;
+    align-items: center;
+    flex: 0.5;
     height: 25px;
 }
 
@@ -44,6 +50,7 @@
     color: rgb(243,170,0);
     font-size: 23px;
     font-weight: 500;
+    max-width: var(--max-size)
 }
 
 .formRegistrationDiv {
@@ -53,6 +60,7 @@
     width: 90vw;
     color: white;
     font-size: 17px;
+    max-width: var(--max-size)
 }
 
 #saveBtn {
@@ -64,6 +72,7 @@
     font-weight: bold;
     border: none;
     border-radius: 5px;
+    max-width: var(--max-size)
 }
 
 .inputFieldDiv {
@@ -85,6 +94,7 @@
 .inputFieldDiv label {
     font-size: 19px;
     margin: 5px 0px;
+    max-width: var(--max-size)
 }
 
 #priceInputField {
@@ -107,7 +117,6 @@
     margin: 5px 0px;
     color: rgba(255, 255, 255, 0.75);
 }
-
 
 @keyframes slide-in-right-page {
     0% {
