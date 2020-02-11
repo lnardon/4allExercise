@@ -8,7 +8,7 @@
     display: flex;
     width: 90vw;
     height: 90px;
-    animation: slide-in-right 1s ease-in-out;
+    animation: slide-in-right 1s 0.5s ease-in-out;
 }
 
 .infoDiv {
