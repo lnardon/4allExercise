@@ -48,6 +48,9 @@ export default function DishRegistration() {
         </div>
       </div>
       <button id="saveBtn" onClick={() => {handleDishRegistration()}} >Salvar</button>
+      <div className={"modalDishRegistration"} >
+        <h2> Sucesso !!! </h2>
+      </div>
     </div>
   );
 }
