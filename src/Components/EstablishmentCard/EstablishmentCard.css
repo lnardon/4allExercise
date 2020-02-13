@@ -10,6 +10,7 @@
     height: 90px;
     animation: slide-in-right-card 0.5s 0.1s ease-in-out;
     max-width: var(--max-size);
+    margin: 5px 0px;
 }
 
 .infoDiv {

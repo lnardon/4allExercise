@@ -13,7 +13,7 @@ export default function EstablishmentCard({ establishmentName, establishmentProd
                 {establishmentName}
             </h3>
             <h4 id="establishmentProductsQuantity" >
-                {establishmentProducts} Pratos
+                {establishmentProducts.length} Pratos
             </h4>
         </div>
         <div className={"addBtnDiv"} onClick={ () => history.push("/" + establishmentName + "/registration") } >

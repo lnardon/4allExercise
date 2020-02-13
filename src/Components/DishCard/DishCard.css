@@ -16,6 +16,7 @@
     box-shadow: rgb(47, 47, 47) 0px 0px 11px;
     max-width: var(--max-size);
     animation: dishCardPopUp 0.3s forwards ease-in-out;
+    margin: 5px 0px
 }
 
 .dishCardHeaderDiv {
@@ -32,10 +33,11 @@
 .dishCardBodyDiv {
     display: flex;
     flex: 4;
-    align-items: center;
+    align-items: flex-start;
     color: rgba(255, 255, 255, 0.8);
     font-size: 15px;
     font-weight: 300;
+    padding-top: 5px ;
 } 
 
 @keyframes dishCardPopUp {
