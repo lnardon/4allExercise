@@ -4,14 +4,14 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import './app.css';
 
 // Components
-import EstablishmentsList from './Pages/EstablishmentsList/EstablishmentsList';
+import DinerList from './Pages/DinerList/DinerList';
 import DishRegistration from './Pages/DishRegistration/DishRegistration';
-import EstablishmentPage from './Pages/EstablishmentPage/EstablishmentPage';
+import DinerPage from './Pages/DinerPage/DinerPage';
 
 export default function App(props) {
 
 
-  const [ establishmentsInfo , setEstablishmentsInfo ] = useState([
+  const [ dinersInfo , setdinersInfo ] = useState([
       {
         "name": "Silva Lanches",
         "menuItems": [
@@ -61,7 +61,7 @@ export default function App(props) {
 
   const handleInfoFetch = () => {
     // Chamada da API para coletar as informações dos estabelecimentos
-    // O resultado da chamada é guardado na variável establishmentsInfo
+    // O resultado da chamada é guardado na variável dinersInfo
   }
 
 
@@ -75,9 +75,9 @@ export default function App(props) {
         <TransitionGroup>      
           <CSSTransition key={location.key} timeout={450} classNames="fade" >
             <Switch location={location}>
-              <Route path="/" exact={true} render={() => <EstablishmentsList {...props} info={establishmentsInfo} />} />
-              <Route path="/:establishmentName" exact={true} render={() => <EstablishmentPage  {...props} info={establishmentsInfo} />} />
-              <Route path="/:establishmentName/registration" render={() => <DishRegistration  {...props} info={establishmentsInfo} />} />
+              <Route path="/" exact={true} render={() => <DinerList {...props} info={dinersInfo} />} />
+              <Route path="/:dinerName" exact={true} render={() => <DinerPage  {...props} info={dinersInfo} />} />
+              <Route path="/:dinerName/registration" render={() => <DishRegistration  {...props} info={dinersInfo} />} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

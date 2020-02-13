@@ -1,53 +1,53 @@
 import React, {useState, useEffect} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import './EstablishmentPage.css';
+import './DinerPage.css';
 import DishCard from '../../Components/DishCard/DishCard';
 
-export default function EstablishmentPage(props) {
+export default function DinerPage(props) {
 
-    const [establishmentInfo , setEstablishmentInfo] = useState({});
+    const [dinerInfo , setDinerInfo] = useState({});
     const [canRender , setCanRender] = useState(false);
 
     let history = useHistory();
-    let {establishmentName} = useParams();
+    let {dinerName} = useParams();
 
-    const getEstablishmentInfo = () => {
-        switch(establishmentName){
+    const getDinerInfo = () => {
+        switch(dinerName){
             case "Canal Café":
-                setEstablishmentInfo(props.info[1]);
+                setDinerInfo(props.info[1]);
                 break;
             case "Silva Lanches":
-                setEstablishmentInfo(props.info[0]);
+                setDinerInfo(props.info[0]);
                 break;
-            default: setEstablishmentInfo(props)
+            default: setDinerInfo(props)
 
         }
         setCanRender(true)
     }
 
     useEffect(() => {
-        getEstablishmentInfo();
+        getDinerInfo();
     }, [])
 
   return (
     <div>
         {canRender ?
-        <div className={"establishmentPageContainer"} >
+        <div className={"dinerPageContainer"} >
             <div className={"headerRegistrationDiv"} >
                 <img id="backBtn" alt="Back Button" src={require('../../assets/images/left-chevron.svg')} onClick={ () => {history.goBack()} } />
                 <h2>share eat</h2>
             </div>
-            <div className={"establishmentPageHeaderDiv"} >
-                <h2> {establishmentInfo.name} </h2>
-                <h4> {establishmentInfo.menuItems.length} pratos </h4>
+            <div className={"dinerPageHeaderDiv"} >
+                <h2> {dinerInfo.name} </h2>
+                <h4> {dinerInfo.menuItems.length} pratos </h4>
             </div>
             <div className={"dishesListDiv"}>
-                {establishmentInfo.menuItems.map((dish) => {
+                {dinerInfo.menuItems.map((dish) => {
                     return <DishCard key={dish.name} dishName={dish.name} dishPrice={dish.price.toFixed(2)} dishDescription={dish.description} />
                 })}
             </div>
-            <div id="addBtn" onClick={ () => {history.push("/" + establishmentInfo.name + "/registration")} } >
+            <div id="addBtn" onClick={ () => {history.push("/" + dinerInfo.name + "/registration")} } >
                 +
             </div> 
         </div> :

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import CurrencyInput from 'react-currency-input';
 import Modal from 'react-modal';
 import './DishRegistration.css';
@@ -7,6 +7,7 @@ import './DishRegistration.css';
 export default function DishRegistration() {
 
   let history = useHistory();
+  let {dinerName} = useParams();
 
   const [dishName , setDishName] = useState('');
   const [dishPrice , setDishPrice] = useState('');
@@ -34,8 +35,8 @@ export default function DishRegistration() {
         <img id="backBtn" alt="Back Button" src={require('../../assets/images/left-chevron.svg')} onClick={ () => {history.goBack()} } />
         <h2>share eat</h2>
       </div> 
-      <div className={"establishmentNameDiv"} >
-        <h2 > Silva Lanches </h2>
+      <div className={"dinerNameDiv"} >
+        <h2 > {dinerName} </h2>
       </div>
       <div className={"formRegistrationDiv"} >
         <div className={"inputFieldDiv"} >

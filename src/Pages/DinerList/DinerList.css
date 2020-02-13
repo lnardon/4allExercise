@@ -9,7 +9,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.establishmentsListContainer {
+.dinersListContainer {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -20,7 +20,7 @@
     color: white;
 }
 
-.headerEstablishmentListDiv {
+.headerdinerListDiv {
     display: flex;
     height: 50px;
     margin: 10px 0px;

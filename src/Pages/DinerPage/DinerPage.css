@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-.establishmentPageContainer {
+.dinerPageContainer {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -24,7 +24,7 @@
     margin: 10px 0px;
 }
 
-.establishmentPageHeaderDiv {
+.dinerPageHeaderDiv {
     display: flex;
     flex: 2;
     flex-direction: column;
@@ -34,14 +34,14 @@
     max-width: var(--max-size);
 }
 
-.establishmentPageHeaderDiv h2 {
+.dinerPageHeaderDiv h2 {
     font-size: 35px;
     font-weight: bold;
     color: rgb(243,170,0);
     margin: 5px 0px;
 }
 
-.establishmentPageHeaderDiv h4 {
+.dinerPageHeaderDiv h4 {
     font-size: 17px;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.8);

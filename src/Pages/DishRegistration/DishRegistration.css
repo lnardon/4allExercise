@@ -42,7 +42,7 @@
     height: 25px;
 }
 
-.establishmentNameDiv {
+.dinerNameDiv {
     display: flex;
     flex: 2;
     align-items: center;
