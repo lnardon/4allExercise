@@ -1,19 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
 
-
-// Components
-import EstablishmentsList from './Pages/EstablishmentsList/EstablishmentsList';
-import DishRegistration from './Pages/DishRegistration/DishRegistration';
-import EstablishmentPage from './Pages/EstablishmentPage/EstablishmentPage';
+import App from './App';
 
 ReactDOM.render(
     <BrowserRouter>
-        <Switch>
-            <Route path="/" exact={true} component={EstablishmentsList} />
-            <Route path="/:establishmentName/registration" component={DishRegistration} />
-            <Route path="/:establishmentName" component={EstablishmentPage} />
-        </Switch>
+        <App />
     </BrowserRouter>
 , document.getElementById('root'));

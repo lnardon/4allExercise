@@ -11,13 +11,13 @@
 
 .establishmentsListContainer {
     display: flex;
+    position: absolute;
     flex-direction: column;
     align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: rgb(51,51,51);
     color: white;
-    animation: slide-out-left-page 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse;
 }
 
 .headerEstablishmentListDiv {
@@ -61,45 +61,3 @@
     flex: 10;
     max-width: var(--max-size);
 }
-
-
-
-@keyframes slide-out-left {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
-    }
-  }
-
-  @keyframes slide-in-right-page {
-    0% {
-      -webkit-transform: translateX(1000px);
-              transform: translateX(1000px);
-      opacity: 0.8;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slide-out-left-page {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 0.8;
-    }
-    100% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 1;
-    }
-  }
-  

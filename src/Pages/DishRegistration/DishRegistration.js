@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import CurrencyInput from 'react-currency-input';
+import Modal from 'react-modal';
 import './DishRegistration.css';
 
 export default function DishRegistration() {
@@ -10,6 +11,7 @@ export default function DishRegistration() {
   const [dishName , setDishName] = useState('');
   const [dishPrice , setDishPrice] = useState('');
   const [dishDescription , setDishDescription] = useState('');
+  const [isModalOpen , setModalOpen] = useState(false);
   
 
   const handleDishRegistration = () => {
@@ -18,9 +20,12 @@ export default function DishRegistration() {
     if ( dishName === "" || dishPrice === "" || dishDescription === "" ) {
       alert(" Campos de Cadastro Incompletos ")
     } else {
-      alert("Prato Cadastrado -> " + dishName + ", " + dishPrice + ", " + dishDescription);
-      history.goBack();
+      setModalOpen(!isModalOpen);
     }
+  }
+
+  const handleModalClose = () => {
+    history.goBack();
   }
 
   return (
@@ -48,9 +53,11 @@ export default function DishRegistration() {
         </div>
       </div>
       <button id="saveBtn" onClick={() => {handleDishRegistration()}} >Salvar</button>
-      <div className={"modalDishRegistration"} >
+      <Modal onRequestClose={() => setModalOpen(!isModalOpen)} isOpen={isModalOpen} className={"modalDishRegistration"} ariaHideApp={false} >
         <h2> Sucesso !!! </h2>
-      </div>
+        <p> Seu novo prato acabou de ser cadastrado </p>
+        <button onClick={ () => handleModalClose()} > Concluir </button>
+      </Modal>
     </div>
   );
 }
