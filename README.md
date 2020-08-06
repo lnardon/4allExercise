@@ -1,7 +1,6 @@
-# 4allExercise Website (Technical Interview)
-## Check the Live Project Here => http://tiny.cc/4allExercise
+# 4all Challenge (Technical Interview)
 
-## The Exercise Details
+## The Challenge Details
 Visando melhorar seu algoritmo de sugestão de lugares, o Share eat precisa conhecer o
 cardápio dos lugares (bares, restaurantes, lanchonetes, cafés, etc) exibidos no app. Para tanto,
 precisamos construir a seguinte funcionalidade:
